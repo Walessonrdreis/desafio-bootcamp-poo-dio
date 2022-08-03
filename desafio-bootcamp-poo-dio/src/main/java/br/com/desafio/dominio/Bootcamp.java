@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Bootcamp {
     private String nome;
-    private String descricacao;
+    private String descricao;
     private final LocalDate dataInicial = LocalDate.now();// começa a contar quando ocorre a inscrição.
     private final LocalDate dataFinal =dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
@@ -22,20 +22,20 @@ public class Bootcamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bootcamp bootcamp = (Bootcamp) o;
-        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricacao, bootcamp.descricacao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
+        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInicial, bootcamp.dataInicial) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, descricacao, dataInicial, dataFinal, devsInscritos, conteudos);
+        return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setDescricacao(String descricacao) {
-        this.descricacao = descricacao;
+    public void setDescricao(String descricacao) {
+        this.descricao = descricacao;
     }
 
     public void setDevsInscritos(Set<Dev> devsInscritos) {
@@ -46,8 +46,8 @@ public class Bootcamp {
         return nome;
     }
 
-    public String getDescricacao() {
-        return descricacao;
+    public String getDescricao() {
+        return descricao;
     }
 
     public LocalDate getDataInicial() {
