@@ -4,7 +4,7 @@ public abstract class Conteudo {
 
     protected static final double XP_PADRAO = 10d;
 
-    public abstract double calcularXo();
+    public abstract double calcularXp();
 
     private String titulo;
     private String descricao;
