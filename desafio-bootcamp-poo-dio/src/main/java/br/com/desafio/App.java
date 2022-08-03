@@ -12,5 +12,7 @@ public class App
     {
        
         Curso curso = new Curso();
+        curso.setTitulo("ReactJs");
+        System.out.println(curso);
     }
 }
